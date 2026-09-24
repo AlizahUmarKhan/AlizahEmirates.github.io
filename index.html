@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4d080d">
+  <title>Alizah Khan — Portfolio 2026</title>
+  <meta name="description" content="Alizah Khan — Portfolio for Emirates Elevate, 2026.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main id="app">
+
+    <!-- 01 — opening boarding screen -->
+    <section class="screen screen--intro active" id="intro" aria-label="Opening">
+      <div class="intro-copy">
+        <p>THIS FLIGHT IS NOW</p>
+        <p>BOARDING</p>
+        <span class="intro-rule"></span>
+        <small>PORTFOLIO 2026 · GATE 01</small>
+      </div>
+      <button class="skip-intro" id="skipIntro" type="button">Skip</button>
+    </section>
+
+    <!-- 02 — passport invitation -->
+    <section class="screen screen--passport" id="passport" aria-label="Passport">
+      <div class="passport-stage">
+        <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+
+        <button class="passport-card passport-card--closed" id="passportButton" type="button" aria-label="Open passport">
+          <span class="passport-edge passport-edge--1"></span>
+          <span class="passport-edge passport-edge--2"></span>
+
+          <span class="passport-cover">
+            <span class="passport-wordmark">PASSPORT</span>
+            <span class="passport-year">PORTFOLIO 2026</span>
+
+            <span class="oval-stamp" aria-hidden="true">
+              <span class="gold-peacock gold-peacock--passport">
+                <img src="assets/peacock-gold-reference.png" alt="">
+              </span>
+            </span>
+
+            <span class="passport-open-label">CLICK TO OPEN</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 03 — portfolio passport / airline card -->
+    <section class="screen screen--portfolio-passport" id="portfolioPassport" aria-label="Portfolio passport">
+      <div class="portfolio-card-wrap">
+        <button class="portfolio-card" id="portfolioCardButton" type="button" aria-label="Open portfolio boarding pass">
+          <span class="portfolio-card-back"></span>
+          <span class="portfolio-card-inner">
+            <span class="portfolio-left">
+              <span class="left-top">
+                <span>PASSPORT</span>
+                <small>PORTFOLIO 2026</small>
+              </span>
+
+              <span class="left-footer">ALIZAH AIRLINES · FIRST CLASS</span>
+            </span>
+
+            <span class="portfolio-right">
+              <span class="airline">ALIZAH AIRLINES</span>
+              <h1>ALIZAH<br>UMAR<br>KHAN</h1>
+
+              <span class="passport-line"></span>
+
+              <span class="detail-grid">
+                <span><small>FLIGHT</small><strong>EK 2026</strong></span>
+                <span><small>CARRIER</small><strong>EMIRATES</strong></span>
+                <span><small>CLASS</small><strong>FIRST</strong></span>
+                <span><small>ROUTE</small><strong>ALIZAH → EMIRATES</strong></span>
+              </span>
+
+              <span class="boarding-pass-label">BOARDING PASS · 2026</span>
+              <span class="plane-mark">EA</span>
+            </span>
+          </span>
+          <span class="portfolio-card-click">CLICK TO CONTINUE</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 04 — live CV / boarding pass -->
+    <section class="screen screen--cv" id="cv" aria-label="Curriculum vitae">
+      <div class="cv-journey" aria-hidden="true">
+        <div class="cv-journey-line"></div>
+        <div class="cv-journey-plane">✈</div>
+        <div class="cv-journey-dot"></div>
+      </div>
+
+      <div class="cv-shell">
+        <article class="boarding-ticket">
+          <header class="ticket-header">
+            <div class="ticket-kicker">BOARDING PASS</div>
+            <div class="ticket-header-peacock">
+              <span class="gold-peacock gold-peacock--header">
+                <img src="assets/peacock-gold-reference.png" alt="">
+              </span>
+            </div>
+
+            <h1 id="cvName">ALIZAH UMAR KHAN</h1>
+
+            <div class="flight-strip">
+              <div>
+                <small>GATE</small>
+                <strong id="cvGate">PORTFOLIO</strong>
+              </div>
+              <div>
+                <small>SEAT</small>
+                <strong id="cvSeat">01A</strong>
+              </div>
+              <div>
+                <small>CLASS</small>
+                <strong id="cvClass">FIRST</strong>
+              </div>
+            </div>
+          </header>
+
+          <div class="ticket-cut"></div>
+
+          <div class="ticket-body">
+            <section class="cv-section cv-section--identity" data-reveal>
+              <div class="label">NAME</div>
+              <div class="cv-value" id="cvFullName">Alizah Umar Khan</div>
+            </section>
+
+            <section class="cv-section" data-reveal>
+              <div class="label">TITLE</div>
+              <div class="cv-value cv-value--large" id="cvTitle">Aspiring Software Engineer </div>
+            </section>
+
+            <section class="cv-section" data-reveal>
+              <div class="label">PROFILE</div>
+              <p class="cv-copy" id="cvProfile">
+                I'm an aspiring software engineer interested in product management and stakeholder experience. Creating technical and visually pleasing products is what motivates and inspires me. I love learning by reverse engineering expert processes and enjoy working with people with diverse backgrounds and expertise.
+              </p>
+            </section>
+
+            <section class="cv-section" data-reveal>
+              <div class="label">SKILLS</div>
+              <ul class="skill-list" id="cvSkills"></ul>
+            </section>
+
+            <section class="cv-section" data-reveal>
+              <div class="label">EXPERIENCE</div>
+              <div id="cvExperience"></div>
+            </section>
+
+            <section class="cv-section" data-reveal>
+              <div class="label">SELECTED PROJECTS</div>
+              <div class="project-list" id="cvProjects"></div>
+            </section>
+
+            <section class="cv-tools" data-reveal aria-labelledby="toolsTitle">
+              <div class="cv-tools-kicker">03 · CARRY-ON</div>
+              <h2 id="toolsTitle">Tools I travel with.</h2>
+              <p class="cv-tools-intro">The best tools that enhance my workflow.</p>
+
+              <div class="tools-grid">
+                <article class="tool-card">
+                  <span class="tool-number">01</span>
+                  <h3>Figma</h3>
+                  <span class="tool-tag">ESSENTIAL</span>
+                </article>
+                <article class="tool-card">
+                  <span class="tool-number">02</span>
+                  <h3>Github</h3>
+                  <span class="tool-tag">ESSENTIAL</span>
+                </article>
+                <article class="tool-card">
+                  <span class="tool-number">03</span>
+                  <h3>Notion</h3>
+                  <span class="tool-tag">ESSENTIAL</span>
+                </article>
+                <article class="tool-card">
+                  <span class="tool-number">04</span>
+                  <h3>Visual Studio Code</h3>
+                  <span class="tool-tag">ESSENTIAL</span>
+                </article>
+                <article class="tool-card">
+                  <span class="tool-number">05</span>
+                  <h3>Netlify</h3>
+                  <span class="tool-tag">ESSENTIAL</span>
+                </article>
+                <article class="tool-card">
+                  <span class="tool-number">06</span>
+                  <h3>Concepts</h3>
+                  <span class="tool-tag">ESSENTIAL</span>
+                </article>
+                <article class="tool-card">
+                  <span class="tool-number">07</span>
+                  <h3>EdX Learning</h3>
+                  <span class="tool-tag">ESSENTIAL</span>
+                </article>
+                <article class="tool-card">
+                  <span class="tool-number">08</span>
+                  <h3>SciKit Learn</h3>
+                  <span class="tool-tag">ESSENTIAL</span>
+                </article>
+              </div>
+            </section>
+
+            <section class="cv-section cv-section--contact" data-reveal>
+              <div>
+                <div class="label">CONTACT</div>
+                <a id="cvEmail" href="alizahumar@gmail.com">alizahumar@gmail.com</a>
+              </div>
+              <div>
+                <div class="label">PORTFOLIO</div>
+                <a id="cvWebsite" href="https://www.linkedin.com/in/alizah-khan-8a310426b/" target="_blank" rel="noreferrer">LinkedIn</a>
+              </div>
+            </section>
+
+            <section class="cv-finale" data-reveal>
+              <div class="cv-finale-kicker">FINAL DESTINATION</div>
+              <h2>Thank you<br><em>for flying with us.</em></h2>
+            
+
+              <div class="cv-stamps" aria-label="Portfolio travel stamps">
+                <div class="cv-stamp cv-stamp--date">
+                  <span>DATE</span>
+                  <strong id="cvDateStamp">21 · 09 · 2026</strong>
+                  <small>DEPARTURE</small>
+                </div>
+
+                <div class="cv-stamp cv-stamp--uae">
+                  <span>UAE</span>
+                  <strong>DUBAI</strong>
+                  <small>UNITED ARAB EMIRATES</small>
+                </div>
+
+                <div class="cv-stamp cv-stamp--first">
+                  <span>ALIZAH AIRLINES</span>
+                  <strong>FIRST CLASS</strong>
+                  <small>PRIORITY BOARDING</small>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <footer class="ticket-footer">
+            <span>ALIZAH AIRLINES</span>
+            <span>PORTFOLIO 2026</span>
+            <span>GATE 01</span>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
